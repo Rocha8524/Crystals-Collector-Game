@@ -6,62 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
     <title>Crystals-Collector-Game</title>
 </head>
 
-<body style = "background-color: #e3f2fd;">
-    
+<body style = "background-image: url(https://img.fireden.net/v/image/1445/90/1445906609777.jpg)">
+
+<div class = "container">
+
     <div class="jumbotron , text-center" style = "background-color: #ee7606;">
-        <h1>Crystal Collector Challenge</h1>
+        <h1>Sonic Chaos Emerald Challenge</h1>
     </div>
     
     <div class = "jumbotron," style = "background-color: #5db45d">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals displayed below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p> You will be given a random number at the start of the game.</p>
+        <p>There are a set of Chaos Emeralds displayed below. By clicking on an emerald, you will add a specific amount of points to your total score.</p>
         <p>You objective is to win the game by matching the total score to the random numbers provided in each crystal. You will however lose the game if your total score goes above the random number given to you.</p>
         <p>The value of each crystal will be hidden from you until you click on it.</p>
         <p>Each time a new game begins, the value of each crystal will change.</p>
         <p>Good luck to you and have fun.</p>
     </div>
 
-    <div class = "jumbotron">
-        <div class = "row">
-            <div class = "col-md-4">
+    <div id = "scoreSheet" class = "card">
+        <h3 class = "card-header , text-center">Sonic Scoresheet: Match The Target Score</h3><br>  
+        <div class = "row , text-center">
+            <div id = "score-tally" class = "col-md-5">
                 <h4 id = "target-score">Target Score: </h4><br>
                 <h4 id = "your-score">Your Total Score Is: </h4>
             </div>
         
-            <div class = "col-md-4">
+            <div id = "gamePoints" class = "col-md-5">
                 <h4 id = "user-wins">Wins: </h4><br>
                 <h4 id = "user=losses">Losses: </h4>
             </div>
-        </div>
-    </div>
-
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-sm-6">
-                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\imgbin-sonic-chaos-sonic-the-hedgehog-chaos-emeralds-blue-others-rCcmWCzb2qAzULdZCpDUQHVjb.png">
-            </div>
-
-            <div class = "col-sm-6">
-                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\pngfind.com-gem-png-808202.png">
-            </div>
-
-            <div class = "col-sm-6">
-                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\red_chaos_emerald_by_banjo2015_d8dgdql.png">
-            </div>
-
-            <div class = "col-sm-6">
-                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\silver_chaos_emerald_by_banjo2015_d8dgdmv.png">
-            </div>
-        </div>
+        </div><br>
     </div><br>
 
+    <div id = "chaosEmeralds" class = "card">
+        
+        <h3 class = "card-header , text-center">Chaos Emeralds: Choose Your Powers!</h3><br>   
+        
+        <div class = "row">
+            <div id = "blueEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\imgbin-sonic-chaos-sonic-the-hedgehog-chaos-emeralds-blue-others-rCcmWCzb2qAzULdZCpDUQHVjb.png" type = "button">
+            </div>
+
+            <div id = "greenEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\160-1602727_sonic-yellow-chaos-emerald-hd-png-download.png" type = "button">
+            </div>
+
+            <div class = "redEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\red emerald.png" type = "button">
+            </div>
+
+            <div id = "yellowEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\kisspng-chaos-emeralds-sonic-chaos-yellow-green-5b397feaebb9d9.4524576315304949549655.png" type = "button">
+            </div>
+
+            <div id = "purpleEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\kisspng-chaos-emeralds-violet-purple-color-emerald-cliparts-5b1e4bbb7e6db4.7165890915287121235179.png" type = "button">
+            </div>
+
+            <div id = "turquoiseEmerald" class = "col-sm-2">
+                <img class = "img img-thumbnail" src = "C:\Users\rocha\Desktop\My Bootcamp Assignments\Crystals-Collector-Game\assets\images\sonic-the-hedgehog-icons-emerald-cyan-blue-gemstone.png" type = "button">
+            </div>
+
+        </div><br>
+    </div>
+    
+</div>
     <hr>
 
-    <footer class = "jumbotron , text-center" style = "background-color: #ee7606;">
+    <footer class = "jumbotron , text-center">
         <h3>© 2019 Alexander Rocha</h3>
     </footer>
 
