@@ -4,47 +4,22 @@ $(document).ready(function() {
 
 // Set up varaiables for the game score and wins/losses tallies
 var userWins = 0;
-$("#user-wins").text("Wins: " + userWins);
+// $("#user-wins").text("Wins: " + userWins);
 
 var userLosses = 0;
-$("#user-losses").text("Losses: " + userLosses);
+// $("#user-losses").text("Losses: " + userLosses);
 
 var userScore = 0;
-$("#your-score").text("Your Score: " + userScore)
+// $("#your-score").text("Your Score: " + userScore)
 
-var totalScore = Math.floor(Math.random() * 120) - 19;
-$("#target-score").text("Target Score: " + totalScore);
+var totalScore = Math.floor(Math.random() * 111) + 19;
+// $("#target-score").text("Target Score: " + totalScore);
 
 // Set up crystal variables
 var greenGem = Math.floor(Math.random() * 12) + 1;
 var yellowGem = Math.floor(Math.random() * 12) +1;
 var blueGem = Math.floor(Math.random() * 12) + 1;
 var purpleGem = Math.floor(Math.random() * 12) + 1;
-var lightGem = Math.floor(Math.random() * 12) + 1;
-
-// Reset game scores and emerald values after each win and loss
-function resetGame () {
-    userScore = 0;
-    totalScore = Math.floor(Math.random() * 120) - 19;
-    blueGem = Math.floor(Math.random() * 12) + 1;
-    greenGem = Math.floor(Math.random() * 12) + 1;
-    yellowGem = Math.floor(Math.random() * 12) + 1;
-    purpleGem = Math.floor(Math.random() * 12) + 1;
-    lightGem = Math.floor(Math.random() * 12) + 1;
-}
-
-// Create functions for wins and losses
-function userWin () {
-    $("#user-wins").text("Wins: " + userWins);
-    userWin = userWin + 1;
-    resetGame();
-}
-
-function userLose () {
-    $("#user-losses").text("Losses: " + userLosses);
-    userLose = userLose + 1;
-    resetGame();
-}
 
 // Emerald click functions and values for each game
 $("#blue-emerald").click(function() {
@@ -52,12 +27,13 @@ $("#blue-emerald").click(function() {
     $("#your-score").text("Your Total Score Is: " + userScore);
     
     if (userScore == totalScore) {
-        userWin ();
+        userWins = userWins + 1;
+        $("#user-wins").text("Wins: " + userWins);
     }   
     if (userScore > totalScore)   {
-        userLose ();
+        userLosses = userLosses +1;
+        $("#user-losses").text("Losses: " + userLosses);
     }
-
 });   
 
 $("#green-emerald").click(function() {
@@ -65,9 +41,12 @@ $("#green-emerald").click(function() {
     $("#your-score").text("Your Total Score Is: " + userScore);
         
     if (userScore == totalScore) {
-        userWin ();
+        userWins = userWins + 1;
+        $("#user-wins").text("Wins: " + userWins);
+
 }   if (userScore > totalScore)   {
-        userLose ();
+        userLosses = userLosses +1;
+        $("#user-losses").text("Losses: " + userLosses);
     }
 });  
 
@@ -76,10 +55,12 @@ $("#yellow-emerald").click(function() {
     $("#your-score").text("Your Total Score Is: " + userScore);
             
     if (userScore == totalScore) {
-        userWin ();
+        userWins = userWins + 1;
+        $("#user-wins").text("Wins: " + userWins);
     
 }   if (userScore > totalScore)   {
-        userLose ();
+        userLosses = userLosses +1;
+        $("#user-losses").text("Losses: " + userLosses);
     }
 });     
 
@@ -88,25 +69,24 @@ $("#purple-emerald").click(function() {
     $("#your-score").text("Your Total Score Is: " + userScore);
 
     if (userScore == totalScore) {
-        userWin();
+        userWins = userWins + 1;
+        $("#user-wins").text("Wins: " + userWins);
 
 }   if (userScore > totalScore) {
-        userLose ();
+        userLosses = userLosses +1;
+        $("#user-losses").text("Losses: " + userLosses);
     }
 });  
 
-$("#light-emerald").click(function() {
-    userScore = lightGem + userScore;
-    $("#your-score").text("Your Total Score Is: " + userScore);
-    
-    if (userScore == totalScore); {
-    userWin ();
-    }   
-    if (userScore > totalScore) {
-    userLose ();
+// Reset game scores and emerald values after each win and loss
+function resetGame () {
+    userScore = 0;
+    totalScore = Math.floor(Math.random() * 111) + 19;
+    blueGem = Math.floor(Math.random() * 12) + 1;
+    greenGem = Math.floor(Math.random() * 12) + 1;
+    yellowGem = Math.floor(Math.random() * 12) + 1;
+    purpleGem = Math.floor(Math.random() * 12) + 1;
 }
-
-});
 
 });
 
