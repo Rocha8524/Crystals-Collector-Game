@@ -1,4 +1,5 @@
 // Make function available after the document is loaded.
+jQuery.noConflict()(function ($) {
 $(document).ready(function() {
 
 // Set up varaiables for the game score and wins/losses tallies
@@ -45,8 +46,8 @@ function userLose () {
     resetGame();
 }
 
-// Emerald click functions for the game
-$(".blue-emerald").click(function() {
+// Emerald click functions and values for each game
+$("#blue-emerald").click(function() {
     userScore = blueGem + userScore;
     $("#your-score").text("Your Total Score Is: " + userScore);
     
@@ -59,7 +60,7 @@ $(".blue-emerald").click(function() {
 
 });   
 
-$(".green-emerald").click(function() {
+$("#green-emerald").click(function() {
     userScore = greenGem + userScore;
     $("#your-score").text("Your Total Score Is: " + userScore);
         
@@ -70,7 +71,7 @@ $(".green-emerald").click(function() {
     }
 });  
 
-$(".yellow-emerald").click(function() {
+$("#yellow-emerald").click(function() {
     userScore = yellowGem + userScore;
     $("#your-score").text("Your Total Score Is: " + userScore);
             
@@ -82,7 +83,7 @@ $(".yellow-emerald").click(function() {
     }
 });     
 
-$(".purple-emerald").click(function() {
+$("#purple-emerald").click(function() {
     userScore = purpleGem + userScore;
     $("#your-score").text("Your Total Score Is: " + userScore);
 
@@ -94,8 +95,8 @@ $(".purple-emerald").click(function() {
     }
 });  
 
-$(".turquiose-emerald").click(function() {
-    userScore - lightGem + userScore;
+$("#light-emerald").click(function() {
+    userScore = lightGem + userScore;
     $("#your-score").text("Your Total Score Is: " + userScore);
     
     if (userScore == totalScore); {
@@ -104,6 +105,8 @@ $(".turquiose-emerald").click(function() {
     if (userScore > totalScore) {
     userLose ();
 }
+
+});
 
 });
 
