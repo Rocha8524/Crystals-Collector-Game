@@ -26,8 +26,8 @@ var purpleGem = Math.floor(Math.random() * 12) + 1;
 function resetGame () {
     userScore = 0;
     $("#your-score").text("Your Score: " + userScore)
-    $("#target-score").text("Target Score: " + totalScore);
     totalScore = Math.floor(Math.random() * 111) + 19;
+    $("#target-score").text("Target Score: " + totalScore);
     blueGem = Math.floor(Math.random() * 12) + 1;
     greenGem = Math.floor(Math.random() * 12) + 1;
     yellowGem = Math.floor(Math.random() * 12) + 1;
@@ -45,7 +45,7 @@ $("#blue-emerald").click(function() {
         resetGame();
     }   
     if (userScore > totalScore)   {
-        userLosses = userLosses +1;
+        userLosses = userLosses + 1;
         $("#user-losses").text("Losses: " + userLosses);
         resetGame();
     }
@@ -61,7 +61,7 @@ $("#green-emerald").click(function() {
         resetGame();
 
 }   if (userScore > totalScore)   {
-        userLosses = userLosses +1;
+        userLosses = userLosses + 1;
         $("#user-losses").text("Losses: " + userLosses);
         resetGame();
     }
@@ -77,7 +77,7 @@ $("#yellow-emerald").click(function() {
         resetGame();
     
 }   if (userScore > totalScore)   {
-        userLosses = userLosses +1;
+        userLosses = userLosses + 1;
         $("#user-losses").text("Losses: " + userLosses);
         resetGame();
     }
@@ -93,7 +93,7 @@ $("#purple-emerald").click(function() {
         resetGame();
 
 }   if (userScore > totalScore) {
-        userLosses = userLosses +1;
+        userLosses = userLosses + 1;
         $("#user-losses").text("Losses: " + userLosses);
         resetGame();
     }
