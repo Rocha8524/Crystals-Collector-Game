@@ -25,9 +25,9 @@ var purpleGem = Math.floor(Math.random() * 12) + 1;
 // Reset game scores and emerald values after each win and loss
 function resetGame () {
     userScore = 0;
+    $("#your-score").text("Your Score: " + userScore)
     $("#target-score").text("Target Score: " + totalScore);
     totalScore = Math.floor(Math.random() * 111) + 19;
-    $("#target-score").text("Target Score: " + totalScore);
     blueGem = Math.floor(Math.random() * 12) + 1;
     greenGem = Math.floor(Math.random() * 12) + 1;
     yellowGem = Math.floor(Math.random() * 12) + 1;
