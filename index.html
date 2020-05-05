@@ -1,87 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Crystals-Collector-Game</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type = "text/javascript" src = "assets\jquery\game.js"></script>
-</head>
+    <script type="text/javascript" src="assets\jquery\game.js"></script>
+  </head>
 
-<body background = "assets\images\sonic-the-hedgehog-background.jpg">
-
-<div class = "container">
-    <div class="jumbotron , text-center" style = "background-image: url(https://i.pinimg.com/236x/60/4c/53/604c53257769e6563ea48df6df358706--sonic-birthday-th-birthday.jpg)">
+  <body background="assets\images\sonic-the-hedgehog-background.jpg">
+    <div class="container">
+      <div
+        class="jumbotron , text-center"
+        style="
+          background-image: url(https://i.pinimg.com/236x/60/4c/53/604c53257769e6563ea48df6df358706--sonic-birthday-th-birthday.jpg);
+        "
+      >
         <strong><h1>Sonic Chaos Emerald Challenge</h1></strong>
+      </div>
     </div>
-</div>
-    
-<div class = "container">
-    <div style = "background-color: #eeeeee">
-        <div class = "row">
-            <div class = "col-md-6">
-                <h6> You will be given a random number at the start of the game.</h6><br>
-                <h6>There are a set of Chaos Emeralds displayed below. By clicking on an emerald, you will add a specific amount of points to your total score.</h6><br>
-                <h6>You objective is to win the game by matching the total score to the random numbers provided in each crystal. You will however lose the game if your total score goes above the random number given to you.</h6><br>
-                <h6>The value of each crystal will be hidden from you until you click on it. Each time a new game begins, the value of each crystal will change.</h6><br>
-                <h6>Good luck to you and have fun.</h6><br>
-            </div>
 
-            <div class = "float-md-right col-md-6">
-                <image class = "img-fluid" src = "assets\images\super sonic.jpg"></image>
-            </div>
+    <div class="container">
+      <div style="background-color: #eeeeee;">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>You will be given a random number at the start of the game.</h6>
+            <br />
+            <h6>
+              There are a set of Chaos Emeralds displayed below. By clicking on
+              an emerald, you will add a specific amount of points to your total
+              score.
+            </h6>
+            <br />
+            <h6>
+              You objective is to win the game by matching the total score to
+              the random numbers provided in each crystal. You will however lose
+              the game if your total score goes above the random number given to
+              you.
+            </h6>
+            <br />
+            <h6>
+              The value of each crystal will be hidden from you until you click
+              on it. Each time a new game begins, the value of each crystal will
+              change.
+            </h6>
+            <br />
+            <h6>Good luck to you and have fun.</h6>
+            <br />
+          </div>
+
+          <div class="float-md-right col-md-6">
+            <image
+              class="img-fluid"
+              src="assets\images\super sonic.jpg"
+            ></image>
+          </div>
         </div>
-    </div><br>
+      </div>
+      <br />
 
-    <div id = "scoreSheet" class = "card">
-        <h3 class = "card-header , text-center">Sonic Scoresheet: Match The Target Score</h3><br>  
-        <div class = "row , text-center">
-            <div id = "score-tally" class = "col-md-5">
-                <h4 id = "target-score">Target Score: </h4><br>
-                <h4 id = "your-score">Your Total Score Is: </h4><br>
-            </div>
-        
-            <div id = "game-points" class = "col-md-5">
-                <h4 id = "user-wins">Wins: </h4><br>
-                <h4 id = "user-losses">Losses: </h4><br>
-            </div>
-        </div><br>
-    </div><br>
+      <div id="scoreSheet" class="card">
+        <h3 class="card-header , text-center">
+          Sonic Scoresheet: Match The Target Score
+        </h3>
+        <br />
+        <div class="row , text-center">
+          <div id="score-tally" class="col-md-5">
+            <h4 id="target-score">Target Score:</h4>
+            <br />
+            <h4 id="your-score">Your Total Score Is:</h4>
+            <br />
+          </div>
 
-    <div id = "chaosEmeralds" class = "card">
-        
-        <h3 class = "card-header , text-center">Chaos Emeralds: Choose Your Powers!</h3><br>   
-        
-        <div class = "row">
-            <div  class = "col-sm-3 , blueEmerald">
-                <input type = "image" class = "button" id = "blue-emerald" src = "assets\images\imgbin-sonic-chaos-sonic-the-hedgehog-chaos-emeralds-blue-others-rCcmWCzb2qAzULdZCpDUQHVjb.png">
-            </div>
+          <div id="game-points" class="col-md-5">
+            <h4 id="user-wins">Wins:</h4>
+            <br />
+            <h4 id="user-losses">Losses:</h4>
+            <br />
+          </div>
+        </div>
+        <br />
+      </div>
+      <br />
 
-            <div class = "col-sm-3 , greenEmerald">
-                <input type = "image" class = "button" id = "green-emerald" src = "assets\images\160-1602727_sonic-yellow-chaos-emerald-hd-png-download.png">
-            </div>
+      <div id="chaosEmeralds" class="card">
+        <h3 class="card-header , text-center">
+          Chaos Emeralds: Choose Your Powers!
+        </h3>
+        <br />
 
-            <div class = "col-sm-3 , yellowEmerald">
-                <input type = "image" class = "button" id = "yellow-emerald" src = "assets\images\kisspng-chaos-emeralds-sonic-chaos-yellow-green-5b397feaebb9d9.4524576315304949549655.png">
-            </div>
+        <div class="row">
+          <div class="col-sm-3 , blueEmerald">
+            <input
+              type="image"
+              class="button"
+              id="blue-emerald"
+              src="assets\images\imgbin-sonic-chaos-sonic-the-hedgehog-chaos-emeralds-blue-others-rCcmWCzb2qAzULdZCpDUQHVjb.png"
+            />
+          </div>
 
-            <div class = "col-sm-3 , purpleEmerald">
-                <input type = "image" class = "button" id = "purple-emerald" src = "assets\images\kisspng-chaos-emeralds-violet-purple-color-emerald-cliparts-5b1e4bbb7e6db4.7165890915287121235179.png">
-            </div>
+          <div class="col-sm-3 , greenEmerald">
+            <input
+              type="image"
+              class="button"
+              id="green-emerald"
+              src="assets\images\160-1602727_sonic-yellow-chaos-emerald-hd-png-download.png"
+            />
+          </div>
 
-        </div><br>
-    
+          <div class="col-sm-3 , yellowEmerald">
+            <input
+              type="image"
+              class="button"
+              id="yellow-emerald"
+              src="assets\images\kisspng-chaos-emeralds-sonic-chaos-yellow-green-5b397feaebb9d9.4524576315304949549655.png"
+            />
+          </div>
+
+          <div class="col-sm-3 , purpleEmerald">
+            <input
+              type="image"
+              class="button"
+              id="purple-emerald"
+              src="assets\images\kisspng-chaos-emeralds-violet-purple-color-emerald-cliparts-5b1e4bbb7e6db4.7165890915287121235179.png"
+            />
+          </div>
+        </div>
+        <br />
+      </div>
+
+      <hr />
+
+      <footer class="jumbotron , text-center">
+        <h3>© 2019 Alexander Rocha</h3>
+      </footer>
     </div>
-       
-<hr>
-
-<footer class = "jumbotron , text-center">
-    <h3>© 2019 Alexander Rocha</h3>
-</footer>
-
-</div>
-
-</body> 
-
+  </body>
 </html>
